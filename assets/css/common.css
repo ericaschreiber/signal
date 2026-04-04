@@ -1,0 +1,101 @@
+:root {
+  --off-black: #202020;
+  --white: #FFFFFF;
+  --green-100: #E2E9E2;
+  --rust-100: #ECE1DF;
+  --rust-200: #9F7C75;
+  --rust-300: #9F7C75;
+  --brown-300: #5B5249;
+  --brown-200: #948A80;
+  --brown-100: #948A80;
+  --blue-100: #DFEAEC;
+  --blue-200: #809194;
+  --blue-300: #4B5858;
+  --blue-400: #2F3538;
+  --blue-500: #1D262A;
+  --rust-500: #2D1D1A;
+  --rust-400: #4A2D26;
+  --green-200: #899182;
+  --green-300: #585D46;
+  --green-400: #333625;
+  --green-500: #24271C;
+  --gray-100: #F1F1F1;
+  --gray-200: #D6D6D6;
+  --neon-lime: #60FF71;
+  --neon-indigo: #4D39FF;
+  --neon-sky: #21F8FF;
+  --neon-pink: #FF29DB;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--blue-500);
+  color: var(--white);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 24px 48px;
+  transition: background 0.4s;
+}
+nav.scrolled { background: rgba(29,38,42,0.92); backdrop-filter: blur(12px); }
+.nav-logo svg { height: 28px; width: auto; }
+.nav-links { display: flex; gap: 36px; list-style: none; }
+.nav-links a {
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--white); }
+.nav-cta {
+  border: 1px solid rgba(255,255,255,0.35);
+  color: var(--white);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  transition: background 0.2s, border-color 0.2s;
+}
+.nav-cta:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.6); }
+
+.hero-video {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+  opacity: 0.85;
+}
+.hero-bg::after { z-index: 1; }
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex; flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 48px 80px;
+  overflow: hidden;
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (max-width: 900px) {
+  nav { padding: 20px 24px; }
+  .nav-links { gap: 18px; }
+}
