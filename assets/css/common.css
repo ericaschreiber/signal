@@ -99,3 +99,6 @@ nav.scrolled { background: rgba(29,38,42,0.92); backdrop-filter: blur(12px); }
   nav { padding: 20px 24px; }
   .nav-links { gap: 18px; }
 }
+
+.nav-logo { display:inline-flex; align-items:center; text-decoration:none; color:inherit; }
+.nav-logo:focus-visible { outline: 2px solid rgba(255,255,255,0.65); outline-offset: 6px; }

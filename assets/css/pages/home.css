@@ -1232,3 +1232,59 @@
     .footer-inner { grid-template-columns: 1fr 1fr; }
     section { padding-left: 24px; padding-right: 24px; }
   }
+
+/* === 2026-04 homepage fixes === */
+.disruption-body {
+  display:grid;
+  grid-template-columns:minmax(0, 1fr) minmax(420px, 560px);
+  gap:80px;
+  align-items:start;
+}
+.disruption-text p {
+  font-size:16px;
+  line-height:1.8;
+  color:rgba(255,255,255,0.78);
+  margin-bottom:24px;
+  max-width:640px;
+}
+.attr-desc {
+  margin-left:auto;
+  text-align:right;
+  font-size:12px;
+  color:rgba(255,255,255,0.45);
+  letter-spacing:0.04em;
+}
+.testimonial-attribution {
+  display:flex;
+  align-items:center;
+  gap:18px;
+  margin-bottom:22px;
+}
+.testimonial-avatar {
+  width:72px;
+  height:72px;
+  border-radius:50%;
+  overflow:hidden;
+  border:1px solid rgba(0,0,0,0.08);
+  flex-shrink:0;
+}
+.testimonial-avatar img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+.testimonials-header h2 { text-align:left; max-width:none; }
+.testimonials-section { padding-top:120px; }
+.testimonial-card { padding-top:36px; }
+.braveheart-section { display:none !important; }
+@media (max-width: 1100px) {
+  .disruption-body { grid-template-columns:1fr; gap:48px; }
+  .attr-desc { text-align:left; margin-left:0; }
+  .attr-row { display:grid; grid-template-columns: 12px minmax(120px, 180px) 1fr; align-items:center; }
+}
+@media (max-width: 700px) {
+  .attr-row { grid-template-columns: 12px 1fr; gap:10px 14px; }
+  .attr-name { grid-column:2; }
+  .attr-desc { grid-column:2; }
+}

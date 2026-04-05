@@ -1840,3 +1840,31 @@
     .offering-section { padding: 80px 24px; }
     .offerings-hero { padding: 140px 24px 80px; min-height: auto; }
   }
+
+/* === 2026-04 offerings nav fixes === */
+.offering-nav {
+  position: sticky;
+  top: 84px;
+  z-index: 90;
+  background: rgba(26, 29, 31, 0.94);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255,255,255,0.04);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.offering-nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 48px;
+  display: flex;
+  gap: 0;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+.offerings-hero { padding-top: 170px; }
+.offering-nav-link { flex: 0 0 auto; }
+.offering-quote img { display:block; }
+@media (max-width: 900px) {
+  .offering-nav { top: 72px; }
+  .offering-nav-inner { padding: 0 24px; }
+  .offerings-hero { padding-top: 150px; }
+}
